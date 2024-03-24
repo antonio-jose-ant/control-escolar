@@ -1,8 +1,8 @@
 <?php
     session_start();
-    include './F_calificacion.php';
+    include './C_consultas.php';
     if(isset($_SESSION['user'])){
-    $calificaciones=new calificaciones();
+    $consult=new consultaas();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +14,12 @@
 <body>
     <?php
         //$consultaas->calCompletoTurno('ca_bloque3','M');
-        //$consultaas->aluHorarioCurso('V');
+        //$consult->aluHorarioCurso('M');
+        //$consult->promedioPorfesor(1);
+        $consult->pGenrlGupo(1,1,'M');
         //$consultaas->calAluBloque(50,'ca_bloque1');
-        //$consultaas->claseImpartida(15);
-        $calificaciones->parcialAlu(50,'ca_bloque1');
+        //$consult->claseImpartida(12);
+        //$calificaciones->parcialAlu(50,'ca_bloque1');
     ?>  
 </body>
 </html>

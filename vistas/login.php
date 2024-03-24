@@ -12,7 +12,6 @@
         <?php
                 if(isset($errorLogin)){
                     echo "<script> alert("."'". $errorLogin."'"."); window.history.go(1);</script>";
-
                 }
             ?>
         <div class="formulario-img">
