@@ -20,8 +20,8 @@ if(isset($_SESSION['user'])){
         $errorLogin = " Nombre de usuario y/o password incorrecto ";
         include_once 'vistas/login.php';
     }
-}else{
-    //echo "login"; 
+}else{   
+    //echo "este es  un comentario de prueba "; 
     include_once 'vistas/login.php';
 }
 ?>
