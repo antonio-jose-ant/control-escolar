@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "poc";
-    font-style: normal;
-    font-weight: normal;
-    src: local("?"), url("../font/ConcertOne-Regular.woff") format("woff"), url("../font/ConcertOne-Regular.ttf") format("truetype");
-}
+
 :root{
     --amarillo:#fbe726;
     --amarillo2:#dabb18;
@@ -22,8 +17,11 @@
     --negro2:#111111;
     --negro3:#3c3c3c;
     --gris:#cacaca;
+    --LetraZM:22px;
+    --LetraZG:25px;
+    --LetraZc:18px;
 }    
-*{font-family: poc;font-size: 18px; margin: 0;text-transform: capitalize;}
+*{font-family: arial;font-size: var(--LetraZM); margin: 0;text-transform: capitalize;}
 input[type="email"]{
     text-transform: lowercase;
 }
@@ -42,7 +40,7 @@ iframe{
     border: none;
 }
 a {
-    font-size: 30px;
+    font-size: var(--LetraZG);
     text-decoration: none;
     color: var(--negro2);
     cursor: pointer;
@@ -55,7 +53,7 @@ input[type="text"],input[type="password"]{
     height: 30px;
     padding: 0 2px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: var(--LetraZc);
     letter-spacing:1px;
 }
 input,select,textarea{
@@ -67,7 +65,7 @@ input,select,textarea{
     height: 30px;
     padding: 0 2px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: var(--LetraZc);
     letter-spacing:1px;
 }
 textarea{
@@ -77,7 +75,7 @@ textarea{
     width: calc(100% - 15px);
     height: calc(100% - 22px);
     border-radius: 5px;
-    font-size: 18px;
+    font-size: var(--LetraZc);
     letter-spacing:1px;
 }
 input:focus,select:focus{
@@ -210,14 +208,14 @@ input.vacio,select.vacio{
     height: 30px;
     width: auto;
     margin: 0 5px;
-    font-size: 25px;
+    font-size: var(--LetraZG);
 }
 .btn-login{
     background-color: var(--naranja);
     border: solid 2px var(--naranja);
     width: 100%;
     height: 40px;
-    font-size: 18px;
+    font-size: var(--LetraZc);
     background-image: url(../img/iconos/cerrar.png);
     background-position: 30%;
     cursor: pointer;
@@ -349,7 +347,7 @@ input.vacio,select.vacio{
     input[type="tel"],select{
         height: auto;
         padding:15px 2px;
-        font-size:18px;
+        font-size:var(--LetraZc);
         margin:2px auto;
     }
     /**************login**********/
