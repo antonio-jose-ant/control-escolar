@@ -1,4 +1,4 @@
-create table materias(id varchar, nombre varchar (255), PRIMARY key (id));
+create table materias(id int, nombre varchar (255), PRIMARY key (id));
 create table grupo(id int, grupo varchar(10),PRIMARY key (id));
 create table grado(id int,PRIMARY key (id));
 create table turno (id char (1),turno varchar(20),H_Entada TIME, H_Salida TIME,PRIMARY key (id));
