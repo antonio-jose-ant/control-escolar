@@ -1,8 +1,10 @@
 <?php
 include_once 'includes/user.php';
 include_once 'includes/user_session.php';
+include  'includes/menu.php';
 $userSession = new UserSession();
 $user = new User();
+$menuF= new opcionesM();
 if(isset($_SESSION['user'])){ 
     //echo "hay sesion";
     $user->setUser($userSession->getCurrentUser());

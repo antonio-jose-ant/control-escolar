@@ -4,10 +4,7 @@ include_once 'db.php';
 class User extends DB{
     private $nombre;
     private $username;
-    private $tipo_usuario;
-    private $RFC;
 
- 
     public function userExists($user, $pass){
         $algoritmo = "sha256";
         $passCifre=hash($algoritmo, $pass);
@@ -23,7 +20,8 @@ class User extends DB{
  
     public function setUser($user){
         $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE username = :user');
-        $query->execute(['user' => $user]);      
+        $query->execute(['user' => $user]); 
+        return $query->fetch(PDO::FETCH_ASSOC);     
     }
 
     

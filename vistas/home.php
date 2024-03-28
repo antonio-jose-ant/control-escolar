@@ -1,6 +1,6 @@
 <?php
-
     if(isset($_SESSION['user'])){ 
+    $tpUser=$user->setUser($_SESSION['user']);
 ?>
 <!DOCTYPE html>
 <html lang="es"> 
@@ -21,16 +21,20 @@
                 <div>
                     <p>¡Bienvenido! </p>
                 </div>
-                <div class="menu-salir">
-                    <a href="includes/logout.php">
-                        <span>inicio</span>
-                    </a>
+                <div>
+                    <ul>
+                        <?php
+                            $resultado=$menuF->opcionesIM($tpUser['tipoUser']);
+                            echo $resultado;
+                        ?>
+                    </ul>
                 </div>
                 <div class="menu-salir">
                     <a href="includes/logout.php">
                         <span>Salir</span>
                     </a>
                 </div>
+                
             </nav>
         </header>
         <div class="cont">
