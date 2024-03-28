@@ -1,6 +1,6 @@
 create table materias(id int, nombre varchar (255), PRIMARY key (id));
 create table grupo(id int, grupo varchar(10),PRIMARY key (id));
-create table grado(id int,PRIMARY key (id));
+create table grado(id int,grado int,PRIMARY key (id));
 create table turno (id char (1),turno varchar(20),H_Entada TIME, H_Salida TIME,PRIMARY key (id));
 
 create table usuarios(id int, username varchar(40),password varchar(64),tipoUser varchar(64),unique key (username),primary key (id));

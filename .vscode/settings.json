@@ -2,21 +2,5 @@
     "dataworkspace.excludedProjects": [
         "escuela/escuela.sqlproj"
     ],
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled",
-                "ssl": {}
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MariaDB",
-            "name": "scholl",
-            "database": "escuela",
-            "username": "ant",
-            "password": "root"
-        }
-    ]
+    "sqltools.connections": []
 }
