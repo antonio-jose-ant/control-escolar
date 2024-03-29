@@ -8,8 +8,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
+    <script>        
+        function changueContentH(div,url){ 
+            $(div).attr("src",url);
+        }
+    </script>
     <div id="menu-container" class="menu-contenedor"> 
         <header class="menu">
             <div class="harmburger" id="harmburger">
@@ -38,7 +45,7 @@
             </nav>
         </header>
         <div class="cont">
-            <iframe src="page/inicio.php"></iframe>
+            <iframe src="page/inicio.php" id="divContentNav"></iframe>
         </div>
     </div>
 </body>
