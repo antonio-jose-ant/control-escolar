@@ -2,15 +2,35 @@
     class opcionesM{
         private $usuariosCrud = array(
             'Agregar' => 'page/user/agregaUser.php',
+            'Mostrar' => 'page/user/mostrarUser.php'
+        );
+        private $maestrosCrud = array(
+            'Agregar' => 'page/user/agregaUser.php',
             'Modificar' => 'page/user/modificaUser.php',
             'Eliminar' => 'page/user/eliminaUser.php',
             'Mostrar' => 'page/user/mostrarUser.php'
         );
-        
+        private $profesoresCrud = array(
+            'Agregar' => 'page/user/agregaUser.php',
+            'Modificar' => 'page/user/modificaUser.php',
+            'Eliminar' => 'page/user/eliminaUser.php',
+            'Mostrar' => 'page/user/mostrarUser.php'
+        );
+        private $caificacionesCrud = array(
+            'Agregar' => 'page/user/agregaUser.php',
+            'Modificar' => 'page/user/modificaUser.php',
+            'Eliminar' => 'page/user/eliminaUser.php',
+            'Mostrar' => 'page/user/mostrarUser.php'
+        );
         private $adminOptions;
         
         public function __construct() {
-            $this->adminOptions = array('usuarios' => $this->usuariosCrud);
+            $this->adminOptions = array(
+                'usuarios' => $this->usuariosCrud,
+                'maestros' => $this->maestrosCrud,
+                'profesores' => $this->profesoresCrud,
+                'calificaciones' => $this->caificacionesCrud
+            );
         }
         
         public function getAdminOptions() {

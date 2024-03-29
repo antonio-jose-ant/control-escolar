@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 <body>
     <script>        
@@ -28,7 +29,7 @@
                 <div>
                     <p>¡Bienvenido! <?php echo $tpUser['username']?></p>
                 </div>
-                <div class="nav-menu-options">
+                <div class="nav-menu-options" id="opcionesMenu">
                     <ul>
                         <?php
                             $resultado=$menuF->opcionesIM($tpUser['tipoUser']);

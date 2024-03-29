@@ -287,11 +287,13 @@ div.nav-menu-options ul{
     height: auto;
 }
 div.nav-menu-options ul li{
-    margin: 3px 0;
-    height: 25px;
+    margin: 15px 0;
+    height: auto;
     overflow: hidden;
     border-bottom: solid 1px var(--gris);
+    transition: height 0.5s ease; /* Transición de altura con duración de 0.5 segundos */
 }
+
 div.nav-menu-options ul li p:hover{
     transform: translateX(10px) ;
 }
@@ -299,7 +301,6 @@ div.nav-menu-options ul li div{
     display: flex;
     flex-direction: column;
     padding: 0 0 0 12px;
-    height: auto;
     align-items: flex-start;
     background-color: var(--gris);
 }
@@ -310,6 +311,42 @@ div.nav-menu-options ul li div a{
     height: 25px;   
     color: var(--azul);
     border-bottom: solid 1px var(--azul2);
+}
+@keyframes abrir {
+    0% {
+        height: 0;
+        opacity: 0;
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    100% {
+        border: none;
+        height: auto; /* Altura máxima cuando está desplegado, ajusta según sea necesario */
+        opacity: 1;
+        transform-origin: left;
+        transform: scaleY(1); /* Escala vertical completa para mostrar el contenido */
+    }
+}
+@keyframes cerrar {
+    0% {
+        height: auto; /* Altura máxima cuando está desplegado, ajusta según sea necesario */
+        opacity: 1;
+        transform-origin: left;
+        transform: scaleY(1); /* Escala vertical completa para mostrar el contenido */
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+}
+div.nav-menu-options ul li.depliega div{
+    animation: abrir 0.5s ease forwards; /* Aplica la animación abrir cuando el elemento tiene la clase depliega */
+    pointer-events: auto; /* Habilita los clics en los elementos desplegados */
+}
+div.nav-menu-options ul li:not(.depliega) div {
+    animation: cerrar 0.5s ease forwards; /* Aplica la animación cerrar cuando el elemento no tiene la clase depliega */
 }
 /************menu fin************/
 /********Home fin ************/
