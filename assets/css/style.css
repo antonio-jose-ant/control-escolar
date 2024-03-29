@@ -243,14 +243,74 @@ input.vacio,select.vacio{
     display: grid;
     grid-template:100%/ 240px calc(100% - 240px);
 }
+.menu-contenedor *{
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: .5s;
+}
 .menu{
     width: 100%;
     height: 100%;
-    padding: 10px 5px;
-    box-sizing: border-box;
+    padding: 5px 5px 5px 15px;
     background-color: var(--azul);
-}
 
+}
+.menu p,a{
+    font-size: var(--LetraZM);
+    cursor: pointer;
+}
+.menu p:hover,a:hover{
+    scale: 1.1;
+}
+.nav-menu *{
+    color: var(--blanco2);
+}
+.nav-menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;  
+}
+.nav-menu div{
+    height: 30px;   
+    display: flex;
+    align-items: center;
+}
+div.nav-menu-options{
+    height: calc(100% - 60px);
+}
+div.nav-menu-options ul{
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+div.nav-menu-options ul li{
+    margin: 3px 0;
+    height: 25px;
+    overflow: hidden;
+    border-bottom: solid 1px var(--gris);
+}
+div.nav-menu-options ul li p:hover{
+    transform: translateX(10px) ;
+}
+div.nav-menu-options ul li div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 12px;
+    height: auto;
+    align-items: flex-start;
+    background-color: var(--gris);
+}
+div.nav-menu-options ul li div a{
+    font-size: var(--LetraZc);
+    margin: 3px 0 0 0;
+    width: 90%;
+    height: 25px;   
+    color: var(--azul);
+    border-bottom: solid 1px var(--azul2);
+}
 /************menu fin************/
 /********Home fin ************/
 

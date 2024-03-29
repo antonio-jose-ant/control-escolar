@@ -1,10 +1,10 @@
 <?php
     class opcionesM{
         private $usuariosCrud = array(
-            'Agregar' => '/page/user/agregaUser.php',
-            'Modificar' => '/page/user/modificaUser.php',
-            'Eliminar' => '/page/user/eliminaUser.php',
-            'Mostrar' => '/page/user/mostrarUser.php'
+            'Agregar' => 'page/user/agregaUser.php',
+            'Modificar' => 'page/user/modificaUser.php',
+            'Eliminar' => 'page/user/eliminaUser.php',
+            'Mostrar' => 'page/user/mostrarUser.php'
         );
         
         private $adminOptions;
@@ -18,11 +18,11 @@
         }
         public function imprimirOpciones() {
             foreach ($this->adminOptions as $usuario => $acciones) {
-                echo "<p>$usuario</p><div>";
+                echo "<li><p>$usuario</p><div>";
                 foreach ($acciones as $accion => $url) {
                     echo "<a onclick=\"changueContentH('#divContentNav','$url')\">$accion</a>";
                 }
-                echo "</div>";
+                echo "</div></li>";
             }
         }
         public function opcionesIM ($tipo){

@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <script>        
@@ -26,9 +26,9 @@
             </div> 
             <nav class="nav-menu">
                 <div>
-                    <p>¡Bienvenido! </p>
+                    <p>¡Bienvenido! <?php echo $tpUser['username']?></p>
                 </div>
-                <div>
+                <div class="nav-menu-options">
                     <ul>
                         <?php
                             $resultado=$menuF->opcionesIM($tpUser['tipoUser']);
