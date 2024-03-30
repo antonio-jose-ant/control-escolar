@@ -5,12 +5,12 @@
             'Mostrar' => 'page/user/mostrarUser.php'
         );
         private $maestrosCrud = array(
-            'Agregar' => 'page/user/agregaUser.php',
-            'Modificar' => 'page/user/modificaUser.php',
-            'Eliminar' => 'page/user/eliminaUser.php',
-            'Mostrar' => 'page/user/mostrarUser.php'
+            //'Agregar' => 'page/user/agregaUser.php',
+            //'Modificar' => 'page/user/modificaUser.php',
+            //'Eliminar' => 'page/user/eliminaUser.php',
+            'Mostrar' => 'page/maestros/mostrarMaestro.php'
         );
-        private $profesoresCrud = array(
+        private $alumnosCrud = array(
             'Agregar' => 'page/user/agregaUser.php',
             'Modificar' => 'page/user/modificaUser.php',
             'Eliminar' => 'page/user/eliminaUser.php',
@@ -26,10 +26,10 @@
         
         public function __construct() {
             $this->adminOptions = array(
-                'usuarios' => $this->usuariosCrud,
-                'maestros' => $this->maestrosCrud,
-                'profesores' => $this->profesoresCrud,
-                'calificaciones' => $this->caificacionesCrud
+                'Usuarios' => $this->usuariosCrud,
+                'Maestros' => $this->maestrosCrud,
+                'Alumnos' => $this->alumnosCrud,
+                'Calificaciones' => $this->caificacionesCrud
             );
         }
         

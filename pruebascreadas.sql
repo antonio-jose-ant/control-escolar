@@ -21,23 +21,23 @@ INSERT INTO materias (id, nombre) VALUES
 
 
 /*maestro */
-INSERT INTO docente (id, nombre)
+INSERT INTO docente (id, nombre,CURP,RFC)
 VALUES 
-    (1, 'Maestro1'),
-    (2, 'Maestro2'),
-    (3, 'Maestro3'),
-    (4, 'Maestro4'),
-    (5, 'Maestro5'),
-    (6, 'Maestro6'),
-    (7, 'Maestro7'),
-    (8, 'Maestro8'),
-    (9, 'Maestro9'),
-    (10, 'Maestro10'),
-    (11, 'Maestro11'),
-    (12, 'Maestro12'),
-    (13, 'Maestro13'),
-    (14, 'Maestro14'),
-    (15, 'Maestro15');
+    (1, 'Maestro1','CURPPRUEBA1','RFCPRUEBA1'),
+    (2, 'Maestro2','CURPPRUEBA2','RFCPRUEBA2'),
+    (3, 'Maestro3','CURPPRUEBA3','RFCPRUEBA3'),
+    (4, 'Maestro4','CURPPRUEBA4','RFCPRUEBA4'),
+    (5, 'Maestro5','CURPPRUEBA5','RFCPRUEBA5'),
+    (6, 'Maestro6','CURPPRUEBA6','RFCPRUEBA6'),
+    (7, 'Maestro7','CURPPRUEBA7','RFCPRUEBA7'),
+    (8, 'Maestro8','CURPPRUEBA8','RFCPRUEBA8'),
+    (9, 'Maestro9','CURPPRUEBA9','RFCPRUEBA9'),
+    (10, 'Maestro10','CURPPRUEBA10','RFCPRUEBA10'),
+    (11, 'Maestro11','CURPPRUEBA11','RFCPRUEBA11'),
+    (12, 'Maestro12','CURPPRUEBA12','RFCPRUEBA12'),
+    (13, 'Maestro13','CURPPRUEBA13','RFCPRUEBA13'),
+    (14, 'Maestro14','CURPPRUEBA14','RFCPRUEBA14'),
+    (15, 'Maestro15','CURPPRUEBA15','RFCPRUEBA15');
 
 /*maestro fin*/
 /*grado y grupo 1*/

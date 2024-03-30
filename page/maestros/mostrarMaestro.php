@@ -1,9 +1,7 @@
 <?php
-    include './crudUser.php';
-    $insusuariosCrud=new usuariosCrud;
-    $imprimeDatos = $insusuariosCrud->muestraUs()->getUserDa();
-
-
+    include './crudMaestros.php';
+    $insusuariosCrud=new maestrosCrud;
+    $imprimeDatos = $insusuariosCrud->muestraMa()->getMaestroDa();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,26 +15,31 @@
     <div class="contenido">
         
         <?php
-            echo "<table border='1'>";
-            echo "<tr>";
+            echo "<table border='1' class='table'> ";
+            echo "<thead class='tableMaestro'><tr>";
             foreach ($imprimeDatos as $columna => $valores) {
-                echo "<th>" . $columna . "</th>";
+                if(strcasecmp($columna,'id')!= 0){
+                   echo "<th>" . $columna . "</th>";
+                }
             }
-            echo "<th>Eliminar</th>";
-            echo "<th>Mpdificar</th>";
-            echo "</tr>";
+            echo "<th>E</th>";
+            echo "<th>M</th>";
+            echo "<th></th>";
+            echo "</tr></thead><tbody class='tableMaestro'>";
 
             $num_filas = count($imprimeDatos['id']); // Suponemos que 'id' es una de las columnas
             for ($i = 0; $i < $num_filas; $i++) {
                 echo "<tr>";
                 foreach ($imprimeDatos as $columna => $valores) {
-                    echo "<td>" . $valores[$i] . "</td>";
+                    if(strcasecmp($columna,'id')!= 0){
+                        echo "<td>" . $valores[$i] . "</td>";
+                    }
                 }
                 echo "<td><input type='button' value=''></td>
-                    <td><input type='button' value=''></td>
+                        <td><input type='button' value=''></td>
                     </tr>";
             }
-
+            echo "</tbody><tfoot class='tableMaestro'><td>$num_filas</td></tfoot>";
             echo "</table>";
         ?>
     </div>
