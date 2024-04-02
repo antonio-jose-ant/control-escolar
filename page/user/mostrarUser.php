@@ -2,8 +2,7 @@
     include './crudUser.php';
     $insusuariosCrud=new usuariosCrud;
     $imprimeDatos = $insusuariosCrud->muestraUs()->getUserDa();
-
-
+    $usuariosTipoM=array(1=>'Administrador',2=>'Profesor',3=>'Secretaria',4=>'Alumno');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,30 +12,40 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body> 
     <div class="contenido">
         
         <?php
-            echo "<table border='1'>";
-            echo "<tr>";
+            echo "<table border='1' class='table'>";
+            echo "<thead class='tableUsuario'><tr>";
             foreach ($imprimeDatos as $columna => $valores) {
-                echo "<th>" . $columna . "</th>";
+                if($columna!=='id'){
+                    echo "<th>" . $columna . "</th>";
+                }
             }
-            echo "<th>Eliminar</th>";
-            echo "<th>Mpdificar</th>";
-            echo "</tr>";
+            echo "<th>E</th>";
+            echo "<th>M</th>";
+            echo "<th></th>";
+            echo "</tr></thead><tbody class='tableUsuario'>";
 
             $num_filas = count($imprimeDatos['id']); // Suponemos que 'id' es una de las columnas
             for ($i = 0; $i < $num_filas; $i++) {
                 echo "<tr>";
                 foreach ($imprimeDatos as $columna => $valores) {
-                    echo "<td>" . $valores[$i] . "</td>";
+                    if($columna!=='id'){
+                        if($columna==='tipoUser'){
+                            echo "<td>" . $usuariosTipoM[$valores[$i]] . "</td>";
+                        }else{
+                            echo "<td>" . $valores[$i] . "</td>";
+                        }
+                    }
                 }
                 echo "<td><input type='button' value=''></td>
                     <td><input type='button' value=''></td>
                     </tr>";
             }
 
+            echo "</tbody><tfoot class='tableUsuario'><td>$num_filas</td></tfoot>";
             echo "</table>";
         ?>
     </div>

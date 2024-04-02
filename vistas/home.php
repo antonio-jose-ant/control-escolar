@@ -33,7 +33,7 @@
                     <ul>
                         <?php
                             $resultado=$menuF->opcionesIM($tpUser['tipoUser']);
-                            echo $resultado;
+                            echo $resultado; 
                         ?>
                     </ul>
                 </div>

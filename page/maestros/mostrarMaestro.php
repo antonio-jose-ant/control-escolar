@@ -21,7 +21,7 @@
                 if(strcasecmp($columna,'id')!= 0){
                    echo "<th>" . $columna . "</th>";
                 }
-            }
+            } 
             echo "<th>E</th>";
             echo "<th>M</th>";
             echo "<th></th>";

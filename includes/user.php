@@ -19,7 +19,7 @@ class User extends DB{
     }
  
     public function setUser($user){
-        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE username = :user');
+        $query = $this->connect()->prepare('SELECT username,tipoUser FROM usuarios WHERE username = :user');
         $query->execute(['user' => $user]); 
         return $query->fetch(PDO::FETCH_ASSOC);     
     }

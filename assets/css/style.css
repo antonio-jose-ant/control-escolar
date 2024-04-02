@@ -158,11 +158,11 @@ input.vacio,select.vacio{
 thead,
 tfoot{
     height: 30px;
-    width: 100%;
+    min-width: 400px;
 }
 .table tbody{
     height: 300px;
-    width: 100%;
+    min-width: 400px;
     overflow: auto;
 }
 
@@ -190,7 +190,33 @@ tfoot{
     grid-template-columns:calc(33.3% - 35px) calc(33.3% - 35px) calc(33.3% - 16px) 35px 35px;
 }
 /************tablas maestros fin*************************/
+/************tablas usuarios*************************/
+.table thead.tableUsuario >tr{ 
+    width: auto;
+    grid-template-columns:calc(50% - 43px) calc(50% - 43px) 35px 35px 16px;
+}
+.table tbody.tableUsuario >tr{
+    grid-template-columns:calc(50% - 43px) calc(50% - 43px) 35px 35px 16px;
+}
 
+.table tfoot.tableUsuario >tr{
+    grid-template-columns:calc(50% - 43px) calc(50% - 43px) 35px 35px 16px;
+}
+/************tablas usuarios fin*************************/
+/************tablas usuarios*************************/
+.table thead.tableAlumno >tr{
+    min-width: 700px;
+    grid-template-columns:calc(33.3% - 93.3px) 58px 68px 68px calc(33.3% - 93.3px) calc(33.3% - 93.3px) 35px 35px 16px;
+}
+.table tbody.tableAlumno >tr{
+    grid-template-columns:calc(33.3% - 88px) 58px 68px 68px calc(33.3% - 88px) calc(33.3% - 88px) 35px 35px;
+
+}
+
+.table tfoot.tableAlumno >tr{
+    grid-template-columns:calc(33.3% - 88px) 58px 68px 68px calc(33.3% - 88px) calc(33.3% - 88px) 35px 35px;
+}
+/************tablas usuarios fin*************************/
 /************tablas fin*************************/
 /************login*************************/
 .contenedor-login {

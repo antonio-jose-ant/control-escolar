@@ -1,19 +1,19 @@
 <?php
     include '../../includes/db.php';
     class maestrosDatos {
-        private $userDa;
+        private $maesroDa;
     
         public function getMaestroDa() {
-            return $this->userDa;
+            return $this->maesroDa;
         }
         public function __construct() {
-            $this->userDa = array(); 
+            $this->maesroDa = array(); 
         }
         public function addMaestro($id,$nombre ,$CURP,$RFC) {
-            $this->userDa['id'][] = $id;
-            $this->userDa['nombre'][] = $nombre;
-            $this->userDa['CURP'][] = $CURP;
-            $this->userDa['RFC'][] = $RFC;
+            $this->maesroDa['id'][] = $id;
+            $this->maesroDa['nombre'][] = $nombre;
+            $this->maesroDa['CURP'][] = $CURP;
+            $this->maesroDa['RFC'][] = $RFC;
         }
     }
     
